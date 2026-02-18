@@ -1,6 +1,7 @@
 package com.madlx.fintrack.entity;
 
 import com.madlx.fintrack.utils.TransactionType;
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
