@@ -22,8 +22,7 @@ public class CategoryController {
     @DeleteMapping(path = "/delete")
     public boolean delete(@RequestParam  Long id){
         return categoryService.deleteCategory(id);
-    }
-    @GetMapping("/getAll")
+    }@GetMapping
     public List<Category> getAll(){
         return categoryService.allCategory();
     }
