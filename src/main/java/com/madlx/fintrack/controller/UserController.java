@@ -4,6 +4,8 @@ import com.madlx.fintrack.entity.User;
 import com.madlx.fintrack.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "api/v1/user")
 public class UserController {
@@ -21,5 +23,9 @@ public class UserController {
     @DeleteMapping(path = "/delete")
     public boolean deleteUser(@RequestParam Long id){
         return userService.deleteUser(id);
+    }
+    @GetMapping(path = "/all")
+    public List<User> getAll(){
+       return userService.getAll();
     }
 }
