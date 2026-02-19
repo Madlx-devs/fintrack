@@ -4,7 +4,6 @@ import com.madlx.fintrack.entity.User;
 import com.madlx.fintrack.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/user")
