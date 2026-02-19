@@ -24,8 +24,4 @@ public class UserController {
     public boolean deleteUser(@RequestParam Long id){
         return userService.deleteUser(id);
     }
-    @GetMapping(path = "/all")
-    public List<User> getAll(){
-       return userService.getAll();
-    }
 }
