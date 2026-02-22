@@ -2,6 +2,7 @@ package com.madlx.fintrack.service;
 
 import com.madlx.fintrack.entity.Transaction;
 import com.madlx.fintrack.repository.TransactionRepository;
+import com.madlx.fintrack.utils.TransactionType;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +10,6 @@ import java.util.Optional;
 
 @Service
 public class TransactionServiceImpl implements TransactionService{
-
     private final TransactionRepository repository;
 
     public TransactionServiceImpl(TransactionRepository repository) {
@@ -18,6 +18,7 @@ public class TransactionServiceImpl implements TransactionService{
 
     @Override
     public Transaction createTransaction(Transaction transaction) {
+
        return repository.save(transaction);
     }
 
@@ -32,4 +33,5 @@ public class TransactionServiceImpl implements TransactionService{
     public List<Transaction> allTransaction() {
         return repository.findAll();
     }
+
 }
